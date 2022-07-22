@@ -161,7 +161,7 @@ function test_not_allowed_value() {
   bazel build volcano:mt-st-helens --//volcano:namer-flag=me \
     >"$TEST_log" 2>&1 && fail "Expected test to fail" || true
 
-  expect_log "Error setting //volcano:namer-flag: invalid value 'me'. Allowed values are"
+  expect_log "Error setting @{0,2}//volcano:namer-flag: invalid value 'me'. Allowed values are"
 }
 
 
